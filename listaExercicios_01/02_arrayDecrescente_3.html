@@ -4,11 +4,18 @@
     //Retorne os elementos do array, separando-os por hífen (n1 - n2 - n3).
 
     //ENTRADA
-
-
+const n1 = Number(prompt("informe o numero"));
+const n2 = Number(prompt("informe o numero"));
+const n3 = Number(prompt("informe o numero"));
     //PROCESSAMENTO
-
-
-    //SAÍDA
-
+let arrayNumero = []
+if (n3 > n2 && n3 > n1 && n2 > n1)
+{arrayNumero = [n3, n2, n1]}
+else if (n2 > n3 && n2 > n1 && n3 > n1)
+arrayNumero = [n2, n3, n1]
+else if (n1 > n2 && n1 > n3 && n2 > n3) {
+    arrayNumero = [n1, n2, n3]
+}
+//SAÍDA
+document.write(arrayNumero.join(" - "));
 </script>
