@@ -15,9 +15,12 @@ const bebida1 = prompt("informe a primeira bebida")
 const bebida2 = prompt("informe a segunda bebida")
 const bebida3 = prompt("informe a terceira bebida")
     //PROCESSAMENTO
-const frutas = []
-const bebidas = []
-let listaCompleta   
+let frutas = [fruta1, fruta2, fruta3];
+document.write(`lista frutas: ${frutas}`)
+const bebidas = [bebida1, bebida2, bebida3];
+document.write(` lista de bebidas: ${bebidas}`)
+let listaCompleta  = frutas.concat(bebidas) 
+document.write(` lista completa: ${listaCompleta}`)
 //SAÍDA
 
 </script>
