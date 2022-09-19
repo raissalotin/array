@@ -1,26 +1,40 @@
 <script>
-    //Problema: Acertar cor
-    //Crie o seguinte array, que contém sete elementos:
-    // const nomeCores = ["azul", "amarelo", "verde", "branco", "preto", "marrom", "cinza"];
-    //Peça para o usuário informar uma cor.
-    //Faça o programa armazenar um número aleatório (entre 0 e 6).
-    //Caso o usuário acerte a cor, que está na posição do array que coincide com o número aleatório gerado pelo computador, o programa deverá retornar:
-    //PARABÉNS! VOCÊ ESTÁ COM SORTE NA COR ${corInformada}!
-    //Caso não acerte, o programa deverá retornar:
-    //NÃO FOI DESSA VEZ... TENTE NOVAMENTE!
+  //Problema: Acertar cor
+  //Crie o seguinte array, que contém sete elementos:
+  // const nomeCores = ["azul", "amarelo", "verde", "branco", "preto", "marrom", "cinza"];
+  //Peça para o usuário informar uma cor.
+  //Faça o programa armazenar um número aleatório (entre 0 e 6).
+  //Caso o usuário acerte a cor, que está na posição do array que coincide com o número aleatório gerado pelo computador, o programa deverá retornar:
+  //PARABÉNS! VOCÊ ESTÁ COM SORTE NA COR ${corInformada}!
+  //Caso não acerte, o programa deverá retornar:
+  //NÃO FOI DESSA VEZ... TENTE NOVAMENTE!
 
-    //ENTRADA
+  //ENTRADA
 
-    const nomeCores = ["azul", "amarelo", "verde", "branco", "preto", "marrom", "cinza"]
-    
-    const cor = (prompt("informe uma cor"))
-    
-    const numeroSorteado = Math.floor(Math.random()*7);
-    alert(numeroSorteado)
-    if (cor.indexOf(cor) === numeroSorteado) {
-        alert(`Voce esta com sorte na cor ${cor}`)
+  const nomeCores = [
+    "azul",
+    "amarelo",
+    "verde",
+    "branco",
+    "preto",
+    "marrom",
+    "cinza",
+  ];
+
+  const cor = prompt(`informe uma cor ${nomeCores.join(", ")}`)
+    .trim()
+    .toLowerCase();
+
+  const posiçãoCor = nomeCores.indexOf(corUsuario);
+  if (posiçãoCor >= 0) {
+    const corSorteada = Math.floor(Math.random() * 7);
+    if (posiçãoCor === corSorteada) {
+      document.write(`esta com sorte na ${corUsuario}`);
     } else {
-        alert("Nao foi dessa vez, tente de novo!")
+      alert(`a cor sorteada foi ${nomeCores[corSorteada]}`);
+      document.write("NÃO FOI DESSA VEZ... TENTE NOVAMENTE!");
     }
-    
+  } else {
+    document.write("cor invalida!");
+  }
 </script>
